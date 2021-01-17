@@ -12,7 +12,6 @@
 		65EB199E02A1FCEAD41A4159 /* Pods_ProjectTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D4432D5DD282B87A6883A2 /* Pods_ProjectTemplate.framework */; };
 		852F6C48257FDF20009CC0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6C47257FDF20009CC0C8 /* AppDelegate.swift */; };
 		852F6C4A257FDF20009CC0C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6C49257FDF20009CC0C8 /* SceneDelegate.swift */; };
-		852F6C4C257FDF20009CC0C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6C4B257FDF20009CC0C8 /* ViewController.swift */; };
 		852F6C4F257FDF20009CC0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852F6C4D257FDF20009CC0C8 /* Main.storyboard */; };
 		852F6C52257FDF20009CC0C8 /* ProjectTemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 852F6C50257FDF20009CC0C8 /* ProjectTemplate.xcdatamodeld */; };
 		852F6C54257FDF21009CC0C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852F6C53257FDF21009CC0C8 /* Assets.xcassets */; };
@@ -32,6 +31,10 @@
 		852F6CC4257FE33B009CC0C8 /* APIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CC2257FE33B009CC0C8 /* APIRequester.swift */; };
 		852F6CC5257FE33B009CC0C8 /* APILink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CC3257FE33B009CC0C8 /* APILink.swift */; };
 		852F6CCD257FE341009CC0C8 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CCA257FE341009CC0C8 /* CoreDataService.swift */; };
+		852F6CDC257FECA1009CC0C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CDB257FECA1009CC0C8 /* ViewController.swift */; };
+		852F6CEA257FED1F009CC0C8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CE9257FED1F009CC0C8 /* ViewModel.swift */; };
+		852F6CEF257FED2C009CC0C8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CEE257FED2C009CC0C8 /* Repository.swift */; };
+		852F6CF4257FED36009CC0C8 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CF3257FED36009CC0C8 /* Navigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +64,6 @@
 		852F6C44257FDF20009CC0C8 /* ProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852F6C47257FDF20009CC0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		852F6C49257FDF20009CC0C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		852F6C4B257FDF20009CC0C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		852F6C4E257FDF20009CC0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		852F6C51257FDF20009CC0C8 /* ProjectTemplate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectTemplate.xcdatamodel; sourceTree = "<group>"; };
 		852F6C53257FDF21009CC0C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +88,10 @@
 		852F6CC2257FE33B009CC0C8 /* APIRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequester.swift; sourceTree = "<group>"; };
 		852F6CC3257FE33B009CC0C8 /* APILink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILink.swift; sourceTree = "<group>"; };
 		852F6CCA257FE341009CC0C8 /* CoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		852F6CDB257FECA1009CC0C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		852F6CE9257FED1F009CC0C8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		852F6CEE257FED2C009CC0C8 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		852F6CF3257FED36009CC0C8 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		ABA2F19F3C20C4755E9AEF05 /* Pods-ProjectTemplate-ProjectTemplateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate-ProjectTemplateUITests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectTemplate-ProjectTemplateUITests/Pods-ProjectTemplate-ProjectTemplateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5F436FA01427A2092ACF9F3 /* Pods-ProjectTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectTemplateTests/Pods-ProjectTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1029C013E1BB875E260F29B /* Pods_ProjectTemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectTemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,12 +169,12 @@
 				852F6C47257FDF20009CC0C8 /* AppDelegate.swift */,
 				852F6C49257FDF20009CC0C8 /* SceneDelegate.swift */,
 				852F6C9E257FE14E009CC0C8 /* ApplicationNavigator.swift */,
-				852F6C4B257FDF20009CC0C8 /* ViewController.swift */,
 				852F6C4D257FDF20009CC0C8 /* Main.storyboard */,
 				852F6C53257FDF21009CC0C8 /* Assets.xcassets */,
 				852F6C55257FDF21009CC0C8 /* LaunchScreen.storyboard */,
 				852F6C58257FDF21009CC0C8 /* Info.plist */,
 				852F6C50257FDF20009CC0C8 /* ProjectTemplate.xcdatamodeld */,
+				852F6CD9257FEC10009CC0C8 /* Templates */,
 			);
 			path = ProjectTemplate;
 			sourceTree = "<group>";
@@ -259,6 +265,25 @@
 				852F6CCA257FE341009CC0C8 /* CoreDataService.swift */,
 			);
 			path = Local;
+			sourceTree = "<group>";
+		};
+		852F6CD9257FEC10009CC0C8 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				852F6CDA257FEC1F009CC0C8 /* rx-swift */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		852F6CDA257FEC1F009CC0C8 /* rx-swift */ = {
+			isa = PBXGroup;
+			children = (
+				852F6CDB257FECA1009CC0C8 /* ViewController.swift */,
+				852F6CE9257FED1F009CC0C8 /* ViewModel.swift */,
+				852F6CEE257FED2C009CC0C8 /* Repository.swift */,
+				852F6CF3257FED36009CC0C8 /* Navigator.swift */,
+			);
+			path = "rx-swift";
 			sourceTree = "<group>";
 		};
 		937CE1E94A52A83A3BAA913A /* Pods */ = {
@@ -513,8 +538,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				852F6CCD257FE341009CC0C8 /* CoreDataService.swift in Sources */,
+				852F6CF4257FED36009CC0C8 /* Navigator.swift in Sources */,
 				852F6CC5257FE33B009CC0C8 /* APILink.swift in Sources */,
-				852F6C4C257FDF20009CC0C8 /* ViewController.swift in Sources */,
 				852F6C48257FDF20009CC0C8 /* AppDelegate.swift in Sources */,
 				852F6CAF257FE225009CC0C8 /* StringExtension.swift in Sources */,
 				852F6C9F257FE14E009CC0C8 /* ApplicationNavigator.swift in Sources */,
@@ -523,7 +548,10 @@
 				852F6CB5257FE22F009CC0C8 /* ActivityIndicator.swift in Sources */,
 				852F6CAE257FE225009CC0C8 /* DateExtension.swift in Sources */,
 				852F6CB6257FE22F009CC0C8 /* ErrorTracker.swift in Sources */,
+				852F6CEA257FED1F009CC0C8 /* ViewModel.swift in Sources */,
+				852F6CEF257FED2C009CC0C8 /* Repository.swift in Sources */,
 				852F6CA5257FE1FE009CC0C8 /* ObservableExtension.swift in Sources */,
+				852F6CDC257FECA1009CC0C8 /* ViewController.swift in Sources */,
 				852F6CC4257FE33B009CC0C8 /* APIRequester.swift in Sources */,
 				852F6C52257FDF20009CC0C8 /* ProjectTemplate.xcdatamodeld in Sources */,
 				852F6CAD257FE225009CC0C8 /* UIViewExtension.swift in Sources */,
@@ -707,6 +735,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -726,6 +755,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ProjectTemplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
