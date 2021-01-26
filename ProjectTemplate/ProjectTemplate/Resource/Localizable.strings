@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  AppTemplate
+
+  Created by ha van dong on 1/15/21.
+  
+*/
+"Hello" = "Hello Engish";
+"home" = "Home";
+"calculator" = "Calculator";
+"lending" = "Lending";
+"history" = "History";
+"profile" = "Profile";
+"borrower" = "Borrower";
+"co-borroweer" = "Co-borrower";
+"lendingInfo" = "Info";
+"supporter" = "Supporter";
