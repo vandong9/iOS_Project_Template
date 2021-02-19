@@ -31,13 +31,16 @@ enum AppSpacing {
     }
 }
 
-enum AppSize {
-    case buttonRadius
+enum AppSize: CGFloat {
+    case radius
+    case simpleButtonHeight
     
     var size: CGFloat {
         switch self {
-        case .buttonRadius:
-            return 5
+        case .radius:
+            return 5.0
+        case .simpleButtonHeight:
+            return 48.0
         }
     }
 }

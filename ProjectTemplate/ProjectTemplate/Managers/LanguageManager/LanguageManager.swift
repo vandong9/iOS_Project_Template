@@ -42,7 +42,7 @@ final class LanaguageManager {
         updateBundle()
 
         // Notify to
-        NotificationCenter.default.post(name: Notification.changeNotification, object: nil)
+        NotificationCenter.default.post(name: Notification.changeLanguageNotification, object: nil)
         return nil
     }
     

@@ -19,6 +19,8 @@ enum AppColor {
     case textInactive
     case title
     
+    case blue
+
     var color: UIColor {
         switch self {
         case .mainBackGround:
@@ -38,6 +40,8 @@ enum AppColor {
         case .textInactive:
             return UIColor(named: "textInactive") ?? #colorLiteral(red: 0.5019607843, green: 0.5019607843, blue: 0.5019607843, alpha: 1)
 
+        case .blue:
+            return #colorLiteral(red: 0, green: 0.4, blue: 0.6980392157, alpha: 1)
         case .title:
             return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         }

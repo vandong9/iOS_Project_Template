@@ -34,13 +34,18 @@ extension TextStyle {
 }
 
 enum AppTextStyle: String, CaseIterable {
+    case small = "AppTextStyle_Small"
+
     case caption1 = "caption1"
     case text1 = "text1"
     
     var textStyle: TextStyle {
         switch self {
+        case .small:
+            return TextStyle().with(font: AppFont.regular(12).font)
+
         case .caption1:
-            return TextStyle().with(font: AppFont.normal(10).font)
+            return TextStyle().with(font: AppFont.regular(10).font)
         case .text1:
             return TextStyle().with(color: .yellow)
         }

@@ -1,6 +1,6 @@
 //
 //  UIViewExtension.swift
-//  AppTemplate
+//  GoExam
 //
 //  Created by Dong Ha on 11/25/20.
 //  Copyright © 2020 Dong. All rights reserved.
@@ -11,12 +11,22 @@ import SnapKit
 
 typealias EmptyCompletion = () -> (Void)
 
-// MARK: - Computed Properties
-@objc extension UIView {
+// MARK: - Convenion Init
+extension UIView {
     class func instanceFromNib() -> UIView {
         return UINib(nibName: String(describing: self), bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
-    
+    class func spaceView(size: CGFloat, isHorizon: Bool = false) -> UIView {
+        let view = UIView(frame: CGRect.zero)
+        view.snp.makeConstraints {
+            isHorizon ? $0.width.equalTo(size) :  $0.height.equalTo(size)
+        }
+        return view
+    }
+}
+
+// MARK: - IBInspectable
+@objc extension UIView {
     @IBInspectable var borderColor: UIColor? {
         get {
             guard let cgColor = layer.borderColor else { return nil }
@@ -51,11 +61,6 @@ typealias EmptyCompletion = () -> (Void)
         get { return layer.shadowRadius }
         set { layer.shadowRadius = newValue }
     }
-}
-
-enum Location {
-    case bottom
-    case top
 }
 
 // MARK: - Convenience Functions
@@ -130,8 +135,9 @@ enum Location {
         layer.mask = maskLayer
     }
     
-    func setGradient(with colors: [UIColor]) {
-        guard !colors.isEmpty else { return debugPrint("Nothing to draw, return!") }
+    @discardableResult
+    func setGradient(with colors: [UIColor]) -> CAGradientLayer? {
+        guard !colors.isEmpty else { return nil }
         layer.sublayers?.forEach { ($0 as? CAGradientLayer)?.removeFromSuperlayer() }
         let gradient = CAGradientLayer()
         gradient.colors = colors.map { $0.cgColor }
@@ -140,6 +146,7 @@ enum Location {
         gradient.endPoint = CGPoint(x:1.0, y:0.5);
 
         layer.insertSublayer(gradient, at: 0)
+        return gradient
     }
     
     func setGradient(with colors: [UIColor], startPoint: CGPoint, endPoint: CGPoint) {
@@ -188,20 +195,34 @@ enum Location {
 }
 
 extension UIView {
-    //    class func instanceFromNib() -> UIView? {
-    //        guard let _ = Bundle.main.path(forResource: String(describing: self), ofType: "nib") else { return nil }
-    //        let array = UINib(nibName: String(describing: self), bundle: nil).instantiate(withOwner: nil, options: nil)
-    //        return array.first as? UIView
-    //    }
+    class func loadViewFromXIB<T : UIView>(nibNameOrNil: String? = nil) -> T {
+            let v: T? = fromNib(nibNameOrNil: nibNameOrNil)
+            return v!
+    }
     
-    func borderCircle(color: UIColor, width: CGFloat) {
-        layer.cornerRadius = bounds.size.height / 2
+    class func fromNib<T : UIView>(nibNameOrNil: String? = nil) -> T? {
+            var view: T?
+            let name: String
+            if let nibName = nibNameOrNil {
+                name = nibName
+            } else {
+                name = "\(self)".components(separatedBy:".").last!
+            }
+            view = Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as? T
+            return view
+    }
+    
+    func setBorderCircle(color: UIColor, width: CGFloat) {
+        setBorder(color: color, width: width, radius: bounds.size.height / 2)
+    }
+    
+    func setBorder(color: UIColor, width: CGFloat, radius: CGFloat) {
+        layer.cornerRadius = radius
         layer.borderColor = color.cgColor
         layer.borderWidth = width
         layer.masksToBounds = true
+
     }
     
 }
-
-
 

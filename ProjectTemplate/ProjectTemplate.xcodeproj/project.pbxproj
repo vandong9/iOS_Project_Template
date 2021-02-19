@@ -29,6 +29,8 @@
 		18EB711B6C8ABA9207320FCB /* Pods_ProjectTemplate_ProjectTemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5236BE73BD9B95CAD4416D /* Pods_ProjectTemplate_ProjectTemplateUITests.framework */; };
 		20BD1E7231751B6DA3AEB578 /* Pods_ProjectTemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1029C013E1BB875E260F29B /* Pods_ProjectTemplateTests.framework */; };
 		65EB199E02A1FCEAD41A4159 /* Pods_ProjectTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D4432D5DD282B87A6883A2 /* Pods_ProjectTemplate.framework */; };
+		8521085425E03A8100B57E43 /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521085325E03A8100B57E43 /* InputFieldView.swift */; };
+		8521086525E03B4000B57E43 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8521086425E03B4000B57E43 /* NotificationExtension.swift */; };
 		852F6C48257FDF20009CC0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6C47257FDF20009CC0C8 /* AppDelegate.swift */; };
 		852F6C4A257FDF20009CC0C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6C49257FDF20009CC0C8 /* SceneDelegate.swift */; };
 		852F6C4F257FDF20009CC0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852F6C4D257FDF20009CC0C8 /* Main.storyboard */; };
@@ -101,6 +103,8 @@
 		69355DE7A28F01AD90A97837 /* Pods-ProjectTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate.debug.xcconfig"; path = "Target Support Files/Pods-ProjectTemplate/Pods-ProjectTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		7A5236BE73BD9B95CAD4416D /* Pods_ProjectTemplate_ProjectTemplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectTemplate_ProjectTemplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C095CFD900B085D05A57AE /* Pods-ProjectTemplate-ProjectTemplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate-ProjectTemplateUITests.release.xcconfig"; path = "Target Support Files/Pods-ProjectTemplate-ProjectTemplateUITests/Pods-ProjectTemplate-ProjectTemplateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8521085325E03A8100B57E43 /* InputFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
+		8521086425E03B4000B57E43 /* NotificationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		852F6C44257FDF20009CC0C8 /* ProjectTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852F6C47257FDF20009CC0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		852F6C49257FDF20009CC0C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,7 +202,7 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		032C702D25C063A800F29CF9 /* AppLayout */ = {
+		032C702D25C063A800F29CF9 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
 				032C702E25C063A800F29CF9 /* AppSizing.swift */,
@@ -206,18 +210,18 @@
 				032C703625C063A800F29CF9 /* AppColor.swift */,
 				032C703725C063A800F29CF9 /* AppFont.swift */,
 			);
-			path = AppLayout;
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		032C702F25C063A800F29CF9 /* TextStyle */ = {
 			isa = PBXGroup;
 			children = (
-				032C703025C063A800F29CF9 /* UITextFieldTextStylable.swift */,
-				032C703125C063A800F29CF9 /* UIButtonTextStylable.swift */,
 				032C703225C063A800F29CF9 /* AppTextStyle.swift */,
 				032C703325C063A800F29CF9 /* TextStylable.swift */,
 				032C703425C063A800F29CF9 /* TextStyleDesignables.swift */,
 				032C703525C063A800F29CF9 /* UILabelTextStylable.swift */,
+				032C703125C063A800F29CF9 /* UIButtonTextStylable.swift */,
+				032C703025C063A800F29CF9 /* UITextFieldTextStylable.swift */,
 			);
 			path = TextStyle;
 			sourceTree = "<group>";
@@ -244,6 +248,7 @@
 		032C708B25C0664600F29CF9 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				8521085325E03A8100B57E43 /* InputFieldView.swift */,
 				032C708C25C0665300F29CF9 /* LoadingOverlayView.swift */,
 				852F6CB3257FE22E009CC0C8 /* ActivityIndicator.swift */,
 			);
@@ -302,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				032C702C25C0638900F29CF9 /* AppDelegate */,
-				032C702D25C063A800F29CF9 /* AppLayout */,
 				852F6C98257FE05A009CC0C8 /* Base */,
 				852F6C99257FE072009CC0C8 /* Common */,
 				852F6C9B257FE124009CC0C8 /* Extension */,
@@ -310,6 +314,7 @@
 				032C702A25C0635A00F29CF9 /* Models */,
 				032C702925C0634800F29CF9 /* Modules */,
 				852F6C9D257FE137009CC0C8 /* Services */,
+				032C702D25C063A800F29CF9 /* Theme */,
 				032C702B25C0637200F29CF9 /* Resource */,
 				852F6CD9257FEC10009CC0C8 /* Templates */,
 				852F6C9E257FE14E009CC0C8 /* ApplicationNavigator.swift */,
@@ -361,6 +366,7 @@
 		852F6C9B257FE124009CC0C8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8521086425E03B4000B57E43 /* NotificationExtension.swift */,
 				032C709825C06E8E00F29CF9 /* UIAlertControllerExtension.swift */,
 				852F6CA3257FE1FE009CC0C8 /* ObservableExtension.swift */,
 				852F6CA4257FE1FE009CC0C8 /* UIStoryboardExtension.swift */,
@@ -702,7 +708,9 @@
 				852F6CA5257FE1FE009CC0C8 /* ObservableExtension.swift in Sources */,
 				852F6CDC257FECA1009CC0C8 /* ViewController.swift in Sources */,
 				032C704025C063A800F29CF9 /* AppFont.swift in Sources */,
+				8521085425E03A8100B57E43 /* InputFieldView.swift in Sources */,
 				032C703D25C063A800F29CF9 /* TextStyleDesignables.swift in Sources */,
+				8521086525E03B4000B57E43 /* NotificationExtension.swift in Sources */,
 				852F6CC4257FE33B009CC0C8 /* APIRequester.swift in Sources */,
 				852F6C52257FDF20009CC0C8 /* ProjectTemplate.xcdatamodeld in Sources */,
 				852F6CAD257FE225009CC0C8 /* UIViewExtension.swift in Sources */,
