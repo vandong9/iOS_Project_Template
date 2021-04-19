@@ -56,6 +56,10 @@
 		852F6CEA257FED1F009CC0C8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CE9257FED1F009CC0C8 /* ViewModel.swift */; };
 		852F6CEF257FED2C009CC0C8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CEE257FED2C009CC0C8 /* Repository.swift */; };
 		852F6CF4257FED36009CC0C8 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CF3257FED36009CC0C8 /* Navigator.swift */; };
+		85B8D117262DDF6D00F1ACC7 /* BaseTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D116262DDF6D00F1ACC7 /* BaseTheme.swift */; };
+		85B8D11C262DDFB700F1ACC7 /* OrangeTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D11B262DDFB700F1ACC7 /* OrangeTheme.swift */; };
+		85B8D121262DE16300F1ACC7 /* BlueTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D120262DE16300F1ACC7 /* BlueTheme.swift */; };
+		85B8D127262DE73600F1ACC7 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D126262DE73600F1ACC7 /* ThemeManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +140,10 @@
 		852F6CE9257FED1F009CC0C8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		852F6CEE257FED2C009CC0C8 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		852F6CF3257FED36009CC0C8 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		85B8D116262DDF6D00F1ACC7 /* BaseTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTheme.swift; sourceTree = "<group>"; };
+		85B8D11B262DDFB700F1ACC7 /* OrangeTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeTheme.swift; sourceTree = "<group>"; };
+		85B8D120262DE16300F1ACC7 /* BlueTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTheme.swift; sourceTree = "<group>"; };
+		85B8D126262DE73600F1ACC7 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		ABA2F19F3C20C4755E9AEF05 /* Pods-ProjectTemplate-ProjectTemplateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate-ProjectTemplateUITests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectTemplate-ProjectTemplateUITests/Pods-ProjectTemplate-ProjectTemplateUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5F436FA01427A2092ACF9F3 /* Pods-ProjectTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectTemplateTests/Pods-ProjectTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E1029C013E1BB875E260F29B /* Pods_ProjectTemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectTemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +213,9 @@
 		032C702D25C063A800F29CF9 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				85B8D116262DDF6D00F1ACC7 /* BaseTheme.swift */,
+				85B8D11B262DDFB700F1ACC7 /* OrangeTheme.swift */,
+				85B8D120262DE16300F1ACC7 /* BlueTheme.swift */,
 				032C702E25C063A800F29CF9 /* AppSizing.swift */,
 				032C702F25C063A800F29CF9 /* TextStyle */,
 				032C703625C063A800F29CF9 /* AppColor.swift */,
@@ -258,6 +269,7 @@
 		032C709125C066EA00F29CF9 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				85B8D125262DE72D00F1ACC7 /* ThemeManager */,
 				032C709225C066EA00F29CF9 /* LanguageManager */,
 			);
 			path = Managers;
@@ -421,6 +433,14 @@
 				852F6CF3257FED36009CC0C8 /* Navigator.swift */,
 			);
 			path = "rx-swift";
+			sourceTree = "<group>";
+		};
+		85B8D125262DE72D00F1ACC7 /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				85B8D126262DE73600F1ACC7 /* ThemeManager.swift */,
+			);
+			path = ThemeManager;
 			sourceTree = "<group>";
 		};
 		937CE1E94A52A83A3BAA913A /* Pods */ = {
@@ -706,10 +726,14 @@
 				852F6CEF257FED2C009CC0C8 /* Repository.swift in Sources */,
 				032C703825C063A800F29CF9 /* AppSizing.swift in Sources */,
 				852F6CA5257FE1FE009CC0C8 /* ObservableExtension.swift in Sources */,
+				85B8D121262DE16300F1ACC7 /* BlueTheme.swift in Sources */,
+				85B8D127262DE73600F1ACC7 /* ThemeManager.swift in Sources */,
 				852F6CDC257FECA1009CC0C8 /* ViewController.swift in Sources */,
+				85B8D117262DDF6D00F1ACC7 /* BaseTheme.swift in Sources */,
 				032C704025C063A800F29CF9 /* AppFont.swift in Sources */,
 				8521085425E03A8100B57E43 /* InputFieldView.swift in Sources */,
 				032C703D25C063A800F29CF9 /* TextStyleDesignables.swift in Sources */,
+				85B8D11C262DDFB700F1ACC7 /* OrangeTheme.swift in Sources */,
 				8521086525E03B4000B57E43 /* NotificationExtension.swift in Sources */,
 				852F6CC4257FE33B009CC0C8 /* APIRequester.swift in Sources */,
 				852F6C52257FDF20009CC0C8 /* ProjectTemplate.xcdatamodeld in Sources */,
