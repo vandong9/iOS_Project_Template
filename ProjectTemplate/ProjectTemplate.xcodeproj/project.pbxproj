@@ -26,6 +26,10 @@
 		032C708D25C0665300F29CF9 /* LoadingOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C708C25C0665300F29CF9 /* LoadingOverlayView.swift */; };
 		032C709425C066EA00F29CF9 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C709325C066EA00F29CF9 /* LanguageManager.swift */; };
 		032C709925C06E8E00F29CF9 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032C709825C06E8E00F29CF9 /* UIAlertControllerExtension.swift */; };
+		03C7BF03262FFFCB00FA629D /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7BF00262FFFCB00FA629D /* PushNotificationManager.swift */; };
+		03C7BF05262FFFCB00FA629D /* PushNotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7BF02262FFFCB00FA629D /* PushNotificationRepository.swift */; };
+		03C7BF1B263003A700FA629D /* PushNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7BF1A263003A700FA629D /* PushNotificationModel.swift */; };
+		03C7BF202630086C00FA629D /* Type1UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7BF1F2630086C00FA629D /* Type1UseCase.swift */; };
 		18EB711B6C8ABA9207320FCB /* Pods_ProjectTemplate_ProjectTemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A5236BE73BD9B95CAD4416D /* Pods_ProjectTemplate_ProjectTemplateUITests.framework */; };
 		20BD1E7231751B6DA3AEB578 /* Pods_ProjectTemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1029C013E1BB875E260F29B /* Pods_ProjectTemplateTests.framework */; };
 		65EB199E02A1FCEAD41A4159 /* Pods_ProjectTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D4432D5DD282B87A6883A2 /* Pods_ProjectTemplate.framework */; };
@@ -101,6 +105,10 @@
 		032C708C25C0665300F29CF9 /* LoadingOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingOverlayView.swift; sourceTree = "<group>"; };
 		032C709325C066EA00F29CF9 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		032C709825C06E8E00F29CF9 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		03C7BF00262FFFCB00FA629D /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		03C7BF02262FFFCB00FA629D /* PushNotificationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationRepository.swift; sourceTree = "<group>"; };
+		03C7BF1A263003A700FA629D /* PushNotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationModel.swift; sourceTree = "<group>"; };
+		03C7BF1F2630086C00FA629D /* Type1UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type1UseCase.swift; sourceTree = "<group>"; };
 		07D4432D5DD282B87A6883A2 /* Pods_ProjectTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5434D169B64A1C3844D1829D /* Pods-ProjectTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate.release.xcconfig"; path = "Target Support Files/Pods-ProjectTemplate/Pods-ProjectTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		5E8D76AC69914A8701F6F2D2 /* Pods-ProjectTemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplateTests.release.xcconfig"; path = "Target Support Files/Pods-ProjectTemplateTests/Pods-ProjectTemplateTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 		032C702A25C0635A00F29CF9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				03C7BF1A263003A700FA629D /* PushNotificationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +278,7 @@
 		032C709125C066EA00F29CF9 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				03C7BEFF262FFFCB00FA629D /* PushNotificationManager */,
 				85B8D125262DE72D00F1ACC7 /* ThemeManager */,
 				032C709225C066EA00F29CF9 /* LanguageManager */,
 			);
@@ -281,6 +291,16 @@
 				032C709325C066EA00F29CF9 /* LanguageManager.swift */,
 			);
 			path = LanguageManager;
+			sourceTree = "<group>";
+		};
+		03C7BEFF262FFFCB00FA629D /* PushNotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				03C7BF00262FFFCB00FA629D /* PushNotificationManager.swift */,
+				03C7BF02262FFFCB00FA629D /* PushNotificationRepository.swift */,
+				03C7BF1F2630086C00FA629D /* Type1UseCase.swift */,
+			);
+			path = PushNotificationManager;
 			sourceTree = "<group>";
 		};
 		56CFD3037D89D823CA5C7DB5 /* Frameworks */ = {
@@ -713,11 +733,15 @@
 				852F6CAF257FE225009CC0C8 /* StringExtension.swift in Sources */,
 				852F6C9F257FE14E009CC0C8 /* ApplicationNavigator.swift in Sources */,
 				032C709925C06E8E00F29CF9 /* UIAlertControllerExtension.swift in Sources */,
+				03C7BF202630086C00FA629D /* Type1UseCase.swift in Sources */,
 				032C703A25C063A800F29CF9 /* UIButtonTextStylable.swift in Sources */,
 				852F6C4A257FDF20009CC0C8 /* SceneDelegate.swift in Sources */,
 				032C708D25C0665300F29CF9 /* LoadingOverlayView.swift in Sources */,
+				03C7BF05262FFFCB00FA629D /* PushNotificationRepository.swift in Sources */,
 				852F6CBD257FE323009CC0C8 /* BaseViewController.swift in Sources */,
+				03C7BF03262FFFCB00FA629D /* PushNotificationManager.swift in Sources */,
 				852F6CB5257FE22F009CC0C8 /* ActivityIndicator.swift in Sources */,
+				03C7BF1B263003A700FA629D /* PushNotificationModel.swift in Sources */,
 				852F6CAE257FE225009CC0C8 /* DateExtension.swift in Sources */,
 				032C709425C066EA00F29CF9 /* LanguageManager.swift in Sources */,
 				852F6CB6257FE22F009CC0C8 /* ErrorTracker.swift in Sources */,

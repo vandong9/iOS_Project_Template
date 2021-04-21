@@ -11,6 +11,7 @@ target 'ProjectTemplate' do
   pod 'SDWebImage', '~> 5.0'
   pod 'Log'
   pod 'SnapKit', '~> 5.0.0'
+  pod 'NotificationBannerSwift', '~> 3.0.0'
 
   target 'ProjectTemplateTests' do
     inherit! :search_paths

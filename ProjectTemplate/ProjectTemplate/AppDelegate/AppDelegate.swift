@@ -10,7 +10,7 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let pushNotificationManager = PushNotificationManager.shared
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         ApplicationNavigator.shared.configureMainInterface(in: window)
         self.window = window
+        
+        // Register push notification to get permission and token
+        registerForPushNotifications()
+
         return true
     }
 
@@ -80,5 +84,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    // MARK: - Push Notification
+    
+    func getNotificationSettings() {
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
+            guard settings.authorizationStatus == .authorized else { return }
+            
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
+        
+        UNUserNotificationCenter.current().delegate = self
+    }
+        
+    func application( _ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let token = tokenParts.joined()
+        pushNotificationManager.setDeviceToken(token)
+        appLog.debug("Device Token: \(token)")
+    }
+    
+    func application( _ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        appLog.debug("Failed to register: \(error)")
+    }
+    
+    
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        guard let aps = userInfo["aps"] as? [String: AnyObject] else {
+            completionHandler(.failed)
+            return
+        }
+        
+        pushNotificationManager.handleReceivePushNotification(aps: aps, isForgroundMode:true)
+   }
+    
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] granted, _ in
+            guard granted else { return }
+            
+            self?.getNotificationSettings()
+        }
+        let viewAction = UNNotificationAction(identifier: "Identifiers.viewAction", title: "View", options: [.foreground])
+        let newsCategory = UNNotificationCategory( identifier: "Identifiers.newsCategory", actions: [viewAction], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([newsCategory])
+    }
+
 }
 
+// MARK: - UNUserNotificationCenterDelegate
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter( _ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        if let aps = userInfo["aps"] as? [String: AnyObject] {
+            pushNotificationManager.handleReceivePushNotification(aps: aps, isForgroundMode: false)
+        }
+        completionHandler()
+    }
+}
