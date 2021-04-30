@@ -1,8 +1,8 @@
 //
 //  LanguageManager.swift
-//  VIBChampion
+//  ProjectTemplate
 //
-//  Created by ha van dong on 1/15/21.
+//  Created by dongha on 19/04/2021.
 //
 
 import Foundation
