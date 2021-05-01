@@ -36,6 +36,7 @@
 		03545BFA263D3C8500180BCA /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03545BF4263D3C8500180BCA /* IntroViewModel.swift */; };
 		03545BFB263D3C8500180BCA /* IntroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03545BF5263D3C8500180BCA /* IntroRepository.swift */; };
 		03545BFC263D3C8500180BCA /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03545BF6263D3C8500180BCA /* IntroViewController.xib */; };
+		03545C19263D42FE00180BCA /* LocalNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03545C18263D42FE00180BCA /* LocalNavigator.swift */; };
 		03C7BF03262FFFCB00FA629D /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7BF00262FFFCB00FA629D /* PushNotificationManager.swift */; };
 		03C7BF05262FFFCB00FA629D /* PushNotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7BF02262FFFCB00FA629D /* PushNotificationRepository.swift */; };
 		03C7BF1B263003A700FA629D /* PushNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7BF1A263003A700FA629D /* PushNotificationModel.swift */; };
@@ -125,6 +126,7 @@
 		03545BF4263D3C8500180BCA /* IntroViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		03545BF5263D3C8500180BCA /* IntroRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroRepository.swift; sourceTree = "<group>"; };
 		03545BF6263D3C8500180BCA /* IntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
+		03545C18263D42FE00180BCA /* LocalNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNavigator.swift; sourceTree = "<group>"; };
 		03C7BF00262FFFCB00FA629D /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		03C7BF02262FFFCB00FA629D /* PushNotificationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationRepository.swift; sourceTree = "<group>"; };
 		03C7BF1A263003A700FA629D /* PushNotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationModel.swift; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 		852F6CDA257FEC1F009CC0C8 /* rx-swift */ = {
 			isa = PBXGroup;
 			children = (
+				03545C18263D42FE00180BCA /* LocalNavigator.swift */,
 				852F6CDB257FECA1009CC0C8 /* ViewController.swift */,
 				03545BBD263D281300180BCA /* ViewController.xib */,
 				032C706A25C0651900F29CF9 /* Factory.swift */,
@@ -821,6 +824,7 @@
 				032C708D25C0665300F29CF9 /* LoadingOverlayView.swift in Sources */,
 				03C7BF05262FFFCB00FA629D /* PushNotificationRepository.swift in Sources */,
 				852F6CBD257FE323009CC0C8 /* BaseViewController.swift in Sources */,
+				03545C19263D42FE00180BCA /* LocalNavigator.swift in Sources */,
 				03C7BF03262FFFCB00FA629D /* PushNotificationManager.swift in Sources */,
 				852F6CB5257FE22F009CC0C8 /* ActivityIndicator.swift in Sources */,
 				03C7BF1B263003A700FA629D /* PushNotificationModel.swift in Sources */,
