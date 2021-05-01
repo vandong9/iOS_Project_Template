@@ -10,9 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class Template__ViewController: BaseViewController {
+class IntroViewController: BaseViewController {
     // MARK: Properties
-    var viewModel: Template__ViewModel!
+    var viewModel: IntroViewModel!
     private let disposeBag = DisposeBag()
     
     // MARK: - LifeCycle
@@ -27,7 +27,7 @@ class Template__ViewController: BaseViewController {
         
         let loadTrigger = PublishSubject<Void>()
                 
-        let input = Template__ViewModel.Input(loadTrigger: loadTrigger.asDriverOnErrorJustComplete())
+        let input = IntroViewModel.Input(loadTrigger: loadTrigger.asDriverOnErrorJustComplete())
         let output = viewModel.transform(input: input)
                 
         loadTrigger.onNext(Void())

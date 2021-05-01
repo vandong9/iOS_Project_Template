@@ -10,15 +10,17 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    private var appCoordinator: AppCoordinator!
+
     let pushNotificationManager = PushNotificationManager.shared
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let window = UIWindow(frame: UIScreen.main.bounds)
-        ApplicationNavigator.shared.configureMainInterface(in: window)
-        self.window = window
-        
+        appCoordinator = AppCoordinator(window: window)
+        appCoordinator.start()
+
         // Register push notification to get permission and token
         registerForPushNotifications()
 
