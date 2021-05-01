@@ -68,7 +68,8 @@
 		852F6CDC257FECA1009CC0C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CDB257FECA1009CC0C8 /* ViewController.swift */; };
 		852F6CEA257FED1F009CC0C8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CE9257FED1F009CC0C8 /* ViewModel.swift */; };
 		852F6CEF257FED2C009CC0C8 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CEE257FED2C009CC0C8 /* Repository.swift */; };
-		852F6CF4257FED36009CC0C8 /* LocalNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852F6CF3257FED36009CC0C8 /* LocalNavigator.swift */; };
+		8560E0222639B0180070C254 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8560E0212639B0180070C254 /* RequestProtocol.swift */; };
+		8560E0272639BA650070C254 /* AlamofireAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8560E0262639BA650070C254 /* AlamofireAPIRequest.swift */; };
 		85B8D117262DDF6D00F1ACC7 /* BaseTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D116262DDF6D00F1ACC7 /* BaseTheme.swift */; };
 		85B8D11C262DDFB700F1ACC7 /* OrangeTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D11B262DDFB700F1ACC7 /* OrangeTheme.swift */; };
 		85B8D121262DE16300F1ACC7 /* BlueTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B8D120262DE16300F1ACC7 /* BlueTheme.swift */; };
@@ -165,7 +166,8 @@
 		852F6CDB257FECA1009CC0C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		852F6CE9257FED1F009CC0C8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		852F6CEE257FED2C009CC0C8 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		852F6CF3257FED36009CC0C8 /* LocalNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNavigator.swift; sourceTree = "<group>"; };
+		8560E0212639B0180070C254 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		8560E0262639BA650070C254 /* AlamofireAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIRequest.swift; sourceTree = "<group>"; };
 		85B8D116262DDF6D00F1ACC7 /* BaseTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTheme.swift; sourceTree = "<group>"; };
 		85B8D11B262DDFB700F1ACC7 /* OrangeTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeTheme.swift; sourceTree = "<group>"; };
 		85B8D120262DE16300F1ACC7 /* BlueTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTheme.swift; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 				032C702D25C063A800F29CF9 /* Theme */,
 				032C702B25C0637200F29CF9 /* Resource */,
 				852F6CD9257FEC10009CC0C8 /* Templates */,
+				8560E0202639AFED0070C254 /* Network */,
 				852F6C4D257FDF20009CC0C8 /* Main.storyboard */,
 				852F6C55257FDF21009CC0C8 /* LaunchScreen.storyboard */,
 				852F6C58257FDF21009CC0C8 /* Info.plist */,
@@ -517,9 +520,17 @@
 				032C706A25C0651900F29CF9 /* Factory.swift */,
 				852F6CE9257FED1F009CC0C8 /* ViewModel.swift */,
 				852F6CEE257FED2C009CC0C8 /* Repository.swift */,
-				852F6CF3257FED36009CC0C8 /* LocalNavigator.swift */,
 			);
 			path = "rx-swift";
+			sourceTree = "<group>";
+		};
+		8560E0202639AFED0070C254 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8560E0212639B0180070C254 /* RequestProtocol.swift */,
+				8560E0262639BA650070C254 /* AlamofireAPIRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		85B8D125262DE72D00F1ACC7 /* ThemeManager */ = {
@@ -790,10 +801,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				852F6CCD257FE341009CC0C8 /* CoreDataService.swift in Sources */,
-				852F6CF4257FED36009CC0C8 /* LocalNavigator.swift in Sources */,
 				032C705C25C064A800F29CF9 /* Log.swift in Sources */,
 				032C703925C063A800F29CF9 /* UITextFieldTextStylable.swift in Sources */,
 				032C706B25C0651900F29CF9 /* Factory.swift in Sources */,
+				8560E0272639BA650070C254 /* AlamofireAPIRequest.swift in Sources */,
 				032C703C25C063A800F29CF9 /* TextStylable.swift in Sources */,
 				852F6CC5257FE33B009CC0C8 /* APILink.swift in Sources */,
 				032C703B25C063A800F29CF9 /* AppTextStyle.swift in Sources */,
@@ -805,6 +816,7 @@
 				032C703A25C063A800F29CF9 /* UIButtonTextStylable.swift in Sources */,
 				03545BF8263D3C8500180BCA /* IntroFactory.swift in Sources */,
 				03545BF7263D3C8500180BCA /* IntroViewController.swift in Sources */,
+				8560E0222639B0180070C254 /* RequestProtocol.swift in Sources */,
 				852F6C4A257FDF20009CC0C8 /* SceneDelegate.swift in Sources */,
 				032C708D25C0665300F29CF9 /* LoadingOverlayView.swift in Sources */,
 				03C7BF05262FFFCB00FA629D /* PushNotificationRepository.swift in Sources */,
