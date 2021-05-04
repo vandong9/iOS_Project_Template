@@ -61,14 +61,24 @@ class AlamofireAPIRequest: APIProtocol {
     }
     
     
-    func request(path: String, method: RequestMethod, headers: [String : String], parameters: [String : Any], completionBlock: (Result<Any, Error>) -> Void) {
+    func request(path: String, method: RequestMethod, headers: [String : String], parameters: [String : Any], completionBlock: @escaping (APIResponse) -> Void) {
         sessionManager.request(path, method: method.alamofireMethod, parameters: parameters, encoding: JSONEncoding.default, headers:  HTTPHeaders(headers))
-            .responseJSON {[weak self] (response) in guard let strongSelf = self else {return }
+            .responseJSON { [weak self] (response) in
+                guard let self = self else { return }
                 let resultData = response.result
+                switch resultData {
+                case .success(let data): completionBlock(self.getResponse(data: data, error: nil))
+                case .failure(let error): completionBlock(self.getResponse(data: nil, error: error))
+                }
+                
 //                let appResult = strongSelf.appResultWithAlamofireResult(result: resultData)
 //                completionBlock(appResult)
         }
 
+    }
+    
+    private func getResponse(data: Any?, error: Error?) -> APIResponse {
+        return APIResponse(data: data, error: error)
     }
     
     

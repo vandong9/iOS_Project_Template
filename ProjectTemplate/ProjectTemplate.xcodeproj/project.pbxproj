@@ -37,6 +37,8 @@
 		03545BFB263D3C8500180BCA /* IntroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03545BF5263D3C8500180BCA /* IntroRepository.swift */; };
 		03545BFC263D3C8500180BCA /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03545BF6263D3C8500180BCA /* IntroViewController.xib */; };
 		03545C19263D42FE00180BCA /* LocalNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03545C18263D42FE00180BCA /* LocalNavigator.swift */; };
+		03545C22263E7D9F00180BCA /* DefaultRestAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03545C21263E7D9F00180BCA /* DefaultRestAPIRequest.swift */; };
+		03545C27263E808100180BCA /* RadomUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03545C26263E808100180BCA /* RadomUserService.swift */; };
 		03C7BF03262FFFCB00FA629D /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7BF00262FFFCB00FA629D /* PushNotificationManager.swift */; };
 		03C7BF05262FFFCB00FA629D /* PushNotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7BF02262FFFCB00FA629D /* PushNotificationRepository.swift */; };
 		03C7BF1B263003A700FA629D /* PushNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C7BF1A263003A700FA629D /* PushNotificationModel.swift */; };
@@ -127,6 +129,8 @@
 		03545BF5263D3C8500180BCA /* IntroRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroRepository.swift; sourceTree = "<group>"; };
 		03545BF6263D3C8500180BCA /* IntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
 		03545C18263D42FE00180BCA /* LocalNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNavigator.swift; sourceTree = "<group>"; };
+		03545C21263E7D9F00180BCA /* DefaultRestAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRestAPIRequest.swift; sourceTree = "<group>"; };
+		03545C26263E808100180BCA /* RadomUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadomUserService.swift; sourceTree = "<group>"; };
 		03C7BF00262FFFCB00FA629D /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
 		03C7BF02262FFFCB00FA629D /* PushNotificationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationRepository.swift; sourceTree = "<group>"; };
 		03C7BF1A263003A700FA629D /* PushNotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationModel.swift; sourceTree = "<group>"; };
@@ -362,6 +366,14 @@
 			path = Intro;
 			sourceTree = "<group>";
 		};
+		03545C1D263D5DD800180BCA /* RandomUser */ = {
+			isa = PBXGroup;
+			children = (
+				03545C26263E808100180BCA /* RadomUserService.swift */,
+			);
+			path = RandomUser;
+			sourceTree = "<group>";
+		};
 		03C7BEFF262FFFCB00FA629D /* PushNotificationManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +495,7 @@
 		852F6C9D257FE137009CC0C8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				03545C1D263D5DD800180BCA /* RandomUser */,
 				852F6CC9257FE341009CC0C8 /* Local */,
 				852F6CC1257FE33B009CC0C8 /* Remote */,
 			);
@@ -532,6 +545,7 @@
 			children = (
 				8560E0212639B0180070C254 /* RequestProtocol.swift */,
 				8560E0262639BA650070C254 /* AlamofireAPIRequest.swift */,
+				03545C21263E7D9F00180BCA /* DefaultRestAPIRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -815,6 +829,7 @@
 				032C703E25C063A800F29CF9 /* UILabelTextStylable.swift in Sources */,
 				852F6CAF257FE225009CC0C8 /* StringExtension.swift in Sources */,
 				032C709925C06E8E00F29CF9 /* UIAlertControllerExtension.swift in Sources */,
+				03545C22263E7D9F00180BCA /* DefaultRestAPIRequest.swift in Sources */,
 				03C7BF202630086C00FA629D /* Type1UseCase.swift in Sources */,
 				032C703A25C063A800F29CF9 /* UIButtonTextStylable.swift in Sources */,
 				03545BF8263D3C8500180BCA /* IntroFactory.swift in Sources */,
@@ -838,6 +853,7 @@
 				852F6CEF257FED2C009CC0C8 /* Repository.swift in Sources */,
 				032C703825C063A800F29CF9 /* AppSizing.swift in Sources */,
 				03545BF9263D3C8500180BCA /* IntroLocalNavigator.swift in Sources */,
+				03545C27263E808100180BCA /* RadomUserService.swift in Sources */,
 				852F6CA5257FE1FE009CC0C8 /* ObservableExtension.swift in Sources */,
 				03545BA0263BF15500180BCA /* BaseCoordinator.swift in Sources */,
 				85B8D121262DE16300F1ACC7 /* BlueTheme.swift in Sources */,

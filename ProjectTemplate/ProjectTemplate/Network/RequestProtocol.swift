@@ -15,6 +15,21 @@ enum RequestMethod {
     case delete
 }
 
+enum encodeType {
+    case Plaid
+    case JSON
+}
+
+
+struct APIResponse {
+    let data: Any?
+    let error: Error?
+}
+
+enum APIError: Error {
+    
+}
+
 protocol APIProtocol {
-    func request(path: String, method: RequestMethod, headers: [String: String], parameters: [String: Any], completionBlock: (Result<Any, Error>)->Void)
+    func request(path: String, method: RequestMethod, headers: [String: String], parameters: [String: Any], completionBlock: @escaping (APIResponse)->Void)
 }
